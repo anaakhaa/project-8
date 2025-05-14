@@ -4,34 +4,76 @@ ANALYSIS AND RISK DETECTION
 
 **Abstract**
 
-In the digital era, accurately interpreting sentiment and emotional tone in text has become 
-increasingly challenging, particularly when irony and sarcasm obscure true intent. Traditional 
-sentiment analysis models often misclassify statements due to their reliance on surface-level 
-sentiment classification, leading to misleading interpretations. To address this limitation, we introduce 
-a Context-Aware System that integrates emotion detection, irony recognition, hate speech and 
-harassment detection, named entity recognition (NER), and part-of-speech (POS) tagging. Unlike 
-conventional approaches, this system analyses multiple linguistic and contextual factors to provide a 
-deeper and more accurate understanding of textual sentiment. 
-A key innovation of this system is the Contextual Harm Score (CHS), which quantifies the potential 
-misleading or harmful impact of a given text by evaluating its sentiment, irony, and contextual 
-references. This feature makes the system particularly valuable for social media monitoring, content 
-moderation, misinformation detection, and brand sentiment tracking. What sets this system apart is its 
-ability to analyze text with contextual depth, considering named entities (e.g., people, organizations, 
-locations) and grammatical structure to assess the real-world impact of statements rather than just 
-their surface meaning. It is designed for domain flexibility, making it suitable for prototype-level 
-experimentation across different text types, including social media posts, news snippets, and 
-conversational language. 
-This system leverages pretrained transformer models sourced from the Hugging Face repository, such 
-as BERT and RoBERTa, which are finetuned for specific tasks like emotion detection, irony 
-classification, hate speech and harassment detection, named entity recognition and employs Stanza 
-for accurate part-of-speech (POS) tagging to capture syntactic structure and grammatical context. 
-This integration enables the system to identify nuanced patterns of bias and discrimination with 
-contextual relevance, thereby enhancing social sensitivity in textual analysis. 
-A user-friendly Streamlit interface brings these capabilities to life through an interactive and visually 
-rich experience. It supports real-time input analysis, offers modular subcomponent breakdowns for 
-greater interpretability, and features dynamic visualizations such as trend plots to reveal underlying 
-patterns. Additionally, it includes Excel export options for seamless data reporting and archival. 
-Complementing there is also professionally designed demo dashboard structure, crafted to simulate 
-future integration scenarios across diverse application domains. This streamlined interface ensures 
-both scalability and accessibility, making it highly adaptable for developers, researchers, and 
-policymakers alike.
+In the digital era, interpreting sentiment and emotional tone in text is challenging, especially with irony and sarcasm obscuring intent. Traditional models often misclassify text due to surface-level analysis, leading to inaccuracies. To address this, we present a Context-Aware System that integrates emotion detection, irony recognition, hate speech detection, named entity recognition (NER), and part-of-speech (POS) tagging for deeper, context-rich sentiment analysis.
+
+A key feature is the Contextual Harm Score (CHS), which evaluates the potential harmful impact of text by analyzing sentiment, irony, and context, making it ideal for social media monitoring, content moderation, and misinformation detection. By considering contextual depth, named entities, and grammatical structure, the system provides real-world insights beyond surface meaning and is adaptable for various text types, including social media, news, and conversational language.
+
+The system leverages finetuned transformer models like BERT and RoBERTa from Hugging Face, alongside Stanza for POS tagging, to identify nuanced patterns of bias and discrimination. A Streamlit interface offers real-time analysis, modular breakdowns, dynamic visualizations, and Excel export options, ensuring usability for developers, researchers, and policymakers. A demo dashboard structure further illustrates potential integrations across diverse applications, enhancing accessibility and scalability.
+
+## 🚀 Features
+
+- **Multilingual Support** with auto-translation
+- **Emotion Detection** (e.g., anger, fear, joy, sadness)
+- **Irony & Sarcasm Recognition**
+- **Named Entity Recognition (NER)** with contextual tagging
+- **POS Tagging** using Stanza
+- **Contextual Harm Score (CHS)** computation
+- **HateXplain-based Harassment Detection**
+- **Streamlit Web Interface** with real-time and batch analysis
+- **Excel Export and Data Visualization**
+- **Demo Dashboard for future real-time integrations**
+
+
+
+## 🧱 Architecture
+
+User Input ➝ Translation ➝ NLP Analysis
+⤷ Emotion Detection
+⤷ Irony Detection
+⤷ NER & POS Tagging
+⤷ Harassment Detection
+➝ CHS Computation ➝ Visualization & Export
+
+
+## 💻 Technology Stack
+
+| Layer                     | Technology                                |
+|--------------------------|--------------------------------------------|
+| Programming Language      | Python 3.x                                 |
+| Frontend UI               | Streamlit                                  |
+| NLP Libraries             | Transformers, Stanza, Langdetect, Deep-Translator |
+| Visualization             | Plotly Express, Pandas                     |
+| Model Sources             | Hugging Face Transformers, HateXplain      |
+| Storage/Export            | Excel (OpenPyXL)                           |
+
+---
+
+## 📦 Folder Structure
+
+📁 contextiq/
+├── context_aware.py               # Main pipeline integrating all modules
+├── Dashboard_demo.py             # Static UI dashboard for future real-time integrations
+├── emotion_detection.py          # Emotion detection module
+├── harassment_detection.py       # HateXplain-based harassment detection module
+├── irony_detection.py            # Irony detection module
+├── NER_multi.py                  # Named Entity Recognition (multilingual)
+├── POS_multi.py                  # Part-of-Speech tagging (multilingual)
+├── sentiment_multilingual.py     # Multilingual sentiment analysis
+├── streamlit_app.py              # Main Streamlit application
+├── sample.py                     # Optional: sample test runner or CLI testing
+├── setup.py                      # Setup script (optional for pip install)
+├── requirements.txt              # Python dependencies
+├── NOTE                          # Any notes or config files
+└── README.md                     # Project documentation
+
+
+## 📊 Use Cases
+
+- Social Media Content Monitoring
+- Crisis Communication & Risk Scoring
+- Mental Health Sentiment Analysis
+- Harassment & Toxicity Detection
+- Educational Feedback Systems
+- Customer Service Chatbots
+- Brand Sentiment Dashboards
+
