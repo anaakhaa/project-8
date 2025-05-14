@@ -50,7 +50,8 @@ User Input ➝ Translation ➝ NLP Analysis
 
 ## 📦 Folder Structure
 
-<pre lang="markdown"> <code>```text 📁 contextiq/ ├── context_aware.py # Main pipeline integrating all modules ├── Dashboard_demo.py # Static UI dashboard for future real-time integrations ├── emotion_detection.py # Emotion detection module ├── harassment_detection.py # HateXplain-based harassment detection module ├── irony_detection.py # Irony detection module ├── NER_multi.py # Named Entity Recognition (multilingual) ├── POS_multi.py # Part-of-Speech tagging (multilingual) ├── sentiment_multilingual.py # Multilingual sentiment analysis ├── streamlit_app.py # Main Streamlit application ├── sample.py # Optional: sample test runner or CLI testing ├── setup.py # Setup script (optional for pip install) ├── requirements.txt # Python dependencies ├── NOTE # Any notes or config files └── README.md # Project documentation ```</code> </pre>
+<pre lang="markdown"> <code>```text 📁 contextiq/ ├── context_aware.py # Main pipeline integrating all modules  ├── Dashboard_demo.py # Static UI dashboard for future real-time integrations  ├── emotion_detection.py # Emotion detection module  ├── harassment_detection.py # HateXplain-based harassment detection module  ├── irony_detection.py # Irony detection module 
+ ├── NER_multi.py # Named Entity Recognition (multilingual) ├── POS_multi.py # Part-of-Speech tagging (multilingual)  ├── sentiment_multilingual.py # Multilingual sentiment analysis  ├── streamlit_app.py # Main Streamlit application  ├── sample.py # Optional: sample test runner or CLI testing  ├── setup.py # Setup script (optional for pip install)  ├── requirements.txt # Python dependencies  ├── NOTE # Any notes or config files └── README.md # Project documentation ```</code> </pre>
 
 ## 📊 Use Cases
 
